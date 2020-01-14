@@ -2,7 +2,6 @@ body {
   background-color: lightblue;
 }
 
-p {
-  color: orange;
-  margin-left: 20px;
+div:hover {
+  font-weight: bold;
 }
