@@ -32,7 +32,7 @@ Spirit Island, and Pandemic</p></div>
 </body>
 <footer>
  <?php
-    echo "My first PHP script!";
+    echo "The time is " . date("h:i:sa");
   ?>
 </footer
 </html>
