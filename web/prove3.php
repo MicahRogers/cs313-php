@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-$_SESSION[cart] = array();
 
 <!DOCTYPE html>
 <html>
@@ -10,6 +9,7 @@ $_SESSION[cart] = array();
 <link rel="stylesheet" type="text/css" href="prove3.css">
 
 <script>
+$_SESSION[cart] = array();
   class Item
   {
   constructor($newName, $newPrice)
