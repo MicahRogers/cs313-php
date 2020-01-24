@@ -24,6 +24,7 @@ session_start();
 </header>
 <body>
   <?php 
+echo "cats are cool";
     foreach ($_SESSION[cart] as $cartItem)
     {
       echo $cartItem.$name + "name<br>";
