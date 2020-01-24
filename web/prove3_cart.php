@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="prove3.css">
 
 <script>
 
@@ -21,12 +20,6 @@
   <h1>Products in Cart</h1>
 </header>
 <body>
-  <?php> 
-    foreach ($_SESSION[cart] as $cartItem)
-    {
-      echo $cartItem.$name + "<br>";
-      echo $cartItem.$price + "<br>";
-      echo $cartItem.$quantity + "<br><br>";
-    }
+<p>hello</p>
 </body>
 </html>
