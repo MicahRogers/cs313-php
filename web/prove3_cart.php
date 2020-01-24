@@ -26,9 +26,9 @@ session_start();
   <?php 
     foreach ($_SESSION[cart] as $cartItem)
     {
-      echo $cartItem.$name + "<br>";
-      echo $cartItem.$price + "<br>";
-      echo $cartItem.$quantity + "<br><br>";
+      echo $cartItem.$name + "name<br>";
+      echo $cartItem.$price + "price<br>";
+      echo $cartItem.$quantity + "quantity<br><br>";
     }
   ?>
 </body>
