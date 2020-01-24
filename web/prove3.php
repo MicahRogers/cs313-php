@@ -41,6 +41,7 @@ $_SESSION[cart] = array();
     }
    echo $_SESSION[cart];
 echo "added to cart";
+alert("Hello! I am an alert box!!");
   }
 
 </script>
