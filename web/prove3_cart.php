@@ -19,12 +19,13 @@
   <h1>Products in Cart</h1>
 </header>
 <body>
-  <?php> 
+  <?php 
     foreach ($_SESSION[cart] as $cartItem)
     {
       echo $cartItem.$name + "<br>";
       echo $cartItem.$price + "<br>";
       echo $cartItem.$quantity + "<br><br>";
     }
+  ?>
 </body>
 </html>
