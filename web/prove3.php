@@ -40,6 +40,7 @@ $_SESSION[cart] = array();
       $_SESSION[cart].push($newItem);
     }
    echo $_SESSION[cart];
+echo "added to cart";
   }
 
 </script>
