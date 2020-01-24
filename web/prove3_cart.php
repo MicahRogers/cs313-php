@@ -9,7 +9,6 @@
 </script>
 <title>Cart</title>
 </head>
-<header>
   <a href="prove3.php">
   <p>|Browse|</p>
   </a>  
@@ -20,6 +19,12 @@
   <h1>Products in Cart</h1>
 </header>
 <body>
-<p>hello</p>
+  <?php> 
+    foreach ($_SESSION[cart] as $cartItem)
+    {
+      echo $cartItem.$name + "<br>";
+      echo $cartItem.$price + "<br>";
+      echo $cartItem.$quantity + "<br><br>";
+    }
 </body>
 </html>
