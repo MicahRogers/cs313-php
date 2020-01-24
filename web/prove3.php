@@ -9,7 +9,7 @@ session_start();
 <link rel="stylesheet" type="text/css" href="prove3.css">
 
 <script>
-<?php
+
 $_SESSION[cart] = array();
   class Item
   {
@@ -39,9 +39,9 @@ $_SESSION[cart] = array();
     {
       $_SESSION[cart].push($newItem);
     }
-
+   echo $_SESSION[cart];
   }
-?>
+
 </script>
 <title>Shopping</title>
 </head>
