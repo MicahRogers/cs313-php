@@ -9,10 +9,10 @@ session_start();
 <link rel="stylesheet" type="text/css" href="prove3.css">
 
 <script>
-<?php $_SESSION["cart"] = array();
-$book = { $name: "The Way of Kings", $price : 9.99, $quantity : 1};
-$pingpong = { $name: "Ping Pong Table", $price : 99.99, $quantity : 1};
-$candyland = { $name: "Candy Land", $price : 14.99, $quantity : 1};
+<?php $_SESSION["cart"] = array();?>
+var book = { name: "The Way of Kings", price : 9.99, quantity : 1};
+var pingpong = { name: "Ping Pong Table", price : 99.99, quantity : 1};
+var candyland = { name: "Candy Land", price : 14.99, quantity : 1};
 ?>
 function myFunction() {
   alert("Hello! I am an alert box!");
@@ -21,18 +21,19 @@ function myFunction() {
   function addToCart($newItem)
   {  
     var $found = false;
-
-    foreach ($_SESSION["cart"] as $cartItem)
-    {
-      if ($newItem.name == $cartItem.$name)
+    if(isset($_SESSION['"cart"])){
+      foreach ($_SESSION["cart"] as $cartItem)
       {
-        $found = true;
-        $cartItem.$quantity++;
+        if ($newItem.name == $cartItem.$name)
+        {
+          $found = true;
+          $cartItem.$quantity++;
+        }
+      }   
+      if (!$found)
+      {
+        array_push($_SESSION["cart"], $newItem);
       }
-    }   
-    if (!$found)
-    {
-      array_push($_SESSION["cart"], $newItem);
     }
 ?>
   }
