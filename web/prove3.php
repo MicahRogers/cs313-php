@@ -21,13 +21,13 @@ function myFunction() {
   function addToCart($newItem)
   {  
     var $found = false;
-    if(isset($_SESSION['"cart"])){
+    if(isset($_SESSION["cart"])){
       foreach ($_SESSION["cart"] as $cartItem)
       {
-        if ($newItem.name == $cartItem.$name)
+        if ($newItem == $cartItem)
         {
           $found = true;
-          $cartItem.$quantity++;
+          
         }
       }   
       if (!$found)
