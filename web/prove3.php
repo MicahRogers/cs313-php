@@ -28,9 +28,8 @@ function test()
 {
 alert("alert");
 }
-function test2()
-{
-alert("alert2");
+function myFunction() {
+  alert("Hello! I am an alert box!");
 }
   function addToCart(Item $newItem)
   {  
@@ -62,7 +61,8 @@ alert("Hello! I am an alert box!!");
   <h1>Products</h1>
 </header>
 <body>
-<button onclick="test()">Try it</button><button onclick="test2()">Try it2</button>
+<button onclick="test()">Try it</button>
+<button onclick="myFunction()">Try it</button>
 
 <div class="row">
   <div class="col-4 col-s-6"><img class="wayofkings" src="wayofkings.png" alt="The Way of Kings">
