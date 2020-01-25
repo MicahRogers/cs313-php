@@ -58,13 +58,7 @@ alert("Hello! I am an alert box!!");
   <h1>Products</h1>
 </header>
 <body>
-<button onclick="myFunction()">Try it</button>
-
-<script>
-function myFunction() {
-  alert("Hello! I am an alert box!");
-}
-</script>
+<button onclick="test()">Try it</button>
 
 <div class="row">
   <div class="col-4 col-s-6"><img class="wayofkings" src="wayofkings.png" alt="The Way of Kings">
