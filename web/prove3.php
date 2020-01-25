@@ -22,8 +22,8 @@ function addToCart(newItem)
 {  
 alert(newItem.name);
   <?php
-  array_push($_SESSION["cart"], newItem);
-  ?>
+  array_push($_SESSION["cart"] ?>, newItem);
+ 
 }
 
 
