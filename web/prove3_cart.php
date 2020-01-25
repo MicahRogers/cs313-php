@@ -24,9 +24,9 @@ session_start();
 </header>
 <body>
   <?php 
-    foreach ($_SESSION["cart"] as $item)
+    for ($i = 0; i < count($_SESSION["cart"]); $i++)
 {
-      echo $item;
+      count($_SESSION["cart"]);
 }
   ?>
 </body>
