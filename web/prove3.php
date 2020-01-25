@@ -10,7 +10,7 @@ session_start();
 
 <script>
 
-$_SESSION[cart] = array();
+<?php $_SESSION[cart] ?> = array();
   class Item
   {
   constructor(newName, newPrice)
@@ -24,21 +24,17 @@ $_SESSION[cart] = array();
   public var quantity;
   }
 
-function test()
-{
-alert("alert");
-}
 function myFunction() {
   alert("Hello! I am an alert box!");
 }
-  function addToCart(Item $newItem)
+  function addToCart(Item newItem)
   {  
 alert("Hello! I am an alert box!!");
     var found = false;
 
-    foreach ($_SESSION[cart] as cartItem)
+    foreach (<?php $_SESSION[cart]?> as cartItem)
     {
-      if (newItem.name == cartItem.$name)
+      if (newItem.name == cartItem.name)
       {
         found = true;
         cartItem.quantity++;
@@ -46,9 +42,9 @@ alert("Hello! I am an alert box!!");
     }   
     if (!found)
     {
-      $_SESSION[cart].push(newItem);
+      <?php $_SESSION[cart]?>.push(newItem);
     }
-   echo $_SESSION[cart];
+   <?php echo $_SESSION[cart]; ?>
   }
 
 </script>
@@ -62,7 +58,6 @@ alert("Hello! I am an alert box!!");
   <h1>Products</h1>
 </header>
 <body>
-<button onclick="test()">Try it</button>
 <button onclick="myFunction()">Try it</button>
 
 <div class="row">
