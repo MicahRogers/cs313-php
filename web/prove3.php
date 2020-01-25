@@ -18,10 +18,10 @@ function myFunction() {
   alert("Hello! I am an alert box!");
 }
 
-  function addToCart(newItem)
-  {  
-
-  }
+function addToCart(newItem)
+{  
+  
+}
 
 
 
