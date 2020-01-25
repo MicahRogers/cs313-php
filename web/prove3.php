@@ -22,7 +22,15 @@ function addToCart(newItem)
 {  
   alert("Adding!");
   array_push(_SESSION["cart"], $newItem);
- 
+    <?php 
+    echo "cats are cool";
+    foreach ($_SESSION["cart"] as $cartItem)
+    {
+      echo $cartItem.$name + "name<br>";
+      echo $cartItem.$price + "price<br>";
+      echo $cartItem.$quantity + "quantity<br><br>";
+    }
+  ?>
 }
 
 
