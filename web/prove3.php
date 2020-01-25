@@ -31,7 +31,7 @@ function myFunction() {
     }   
     if (!found)
     {
-      <?php $_SESSION["cart"]?>.push(newItem);
+
     }
     <?php echo $_SESSION["cart"];?>
   }
