@@ -33,7 +33,7 @@ function myFunction() {
     if (!found)
     {
 <?php
-      $_SESSION["cart"].push(newItem);
+      array_push($_SESSION["cart"], newItem);
     }
      echo $_SESSION["cart"];
 ?>
