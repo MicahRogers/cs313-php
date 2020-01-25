@@ -20,6 +20,7 @@ function myFunction() {
 
 function addToCart(newItem)
 {  
+alert(newItem);
   <?php
   array_push($_SESSION["cart"], newItem);
   ?>
