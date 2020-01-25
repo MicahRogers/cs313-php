@@ -20,7 +20,9 @@ function myFunction() {
 
 function addToCart(newItem)
 {  
+  alert("Adding!");
   array_push(_SESSION["cart"], $newItem);
+ 
 }
 
 
