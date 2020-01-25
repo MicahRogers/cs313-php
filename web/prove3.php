@@ -13,7 +13,7 @@ session_start();
 var book = { name: "The Way of Kings", price : 9.99, quantity : 1};
 var pingpong = { name: "Ping Pong Table", price : 99.99, quantity : 1};
 var candyland = { name: "Candy Land", price : 14.99, quantity : 1};
-?>
+
 function myFunction() {
   alert("Hello! I am an alert box!");
 }
