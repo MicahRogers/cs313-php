@@ -24,14 +24,14 @@ function addToCart(newItem)
   array_push($_SESSION["cart"], newItem);
   ?>
 }
-
-function addToCart2(newItem)
-{    
   <?php
-  array_push($_SESSION["cart"], newItem);
-  ?>
-}
+function addToCart2($newItem)
+{    
 
+  array_push($_SESSION["cart"], $newItem);
+
+}
+?>
 </script>
 <title>Shopping</title>
 </head>
