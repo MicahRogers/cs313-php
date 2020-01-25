@@ -60,7 +60,7 @@ function addCandyland()
 <div class="row">
   <div class="col-4 col-s-6"><img class="wayofkings" src="wayofkings.png" alt="The Way of Kings">
     <p>The Way of Kings</p>
-    <button onclick="addToCart(book)">Add to Cart</button>
+    <button onclick="addBook()">Add to Cart</button>
   </div>
   <div class="col-4 col-s-6"><img class="pingpong" src="pingpong.png" alt="Ping Pong">
     <p>Ping Pong Table: Two paddles and one ball included</p>
