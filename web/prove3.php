@@ -12,15 +12,7 @@ session_start();
 
   class Item
   {
-  constructor(newName, newPrice)
-  { 
-    this.name = newName;
-    this.price; = newPrice;
-    this.quantity = 1;
-  }
-  public name;
-  public price;
-  public quantity;
+
   }
 
 function myFunction() {
