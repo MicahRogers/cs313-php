@@ -57,15 +57,15 @@ alert("Hello! I am an alert box!!");
 <div class="row">
   <div class="col-4 col-s-6"><img class="wayofkings" src="wayofkings.png" alt="The Way of Kings">
     <p>The Way of Kings</p>
-    <button onclick="addToCart(new Item ("The Way of Kings", 9.99))">Add to Cart</button>
+    <button type="button" onclick="addToCart(new Item ("The Way of Kings", 9.99))">Add to Cart</button>
   </div>
   <div class="col-4 col-s-6"><img class="pingpong" src="pingpong.png" alt="Ping Pong">
     <p>Ping Pong Table: Two paddles and one ball included</p>
-    <button onclick="addToCart(new Item ("Ping Ping Table", 99.99))">Add to Cart</button>
+    <button type="button" onclick="addToCart(new Item ("Ping Ping Table", 99.99))">Add to Cart</button>
   </div>
   <div class="col-4 col-s-6"><img class="candyland" src="boardgame.png" alt="Board Games">
     <p>Candy Land</p>
-    <button onclick="addToCart(new Item ("Candyland", 14.99))">Add to Cart</button>
+    <button type="button" onclick="addToCart(new Item ("Candyland", 14.99))">Add to Cart</button>
   </div>  
 </div>
 </body>
