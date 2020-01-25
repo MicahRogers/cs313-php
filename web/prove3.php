@@ -52,7 +52,7 @@ function addToCart2($newItem)
   </div>
   <div class="col-4 col-s-6"><img class="pingpong" src="pingpong.png" alt="Ping Pong">
     <p>Ping Pong Table: Two paddles and one ball included</p>
-    <button onclick="addToCart(pingpong)">Add to Cart</button>
+    <button onclick="addToCart2("Ping Pong")">Add to Cart</button>
   </div>
   <div class="col-4 col-s-6"><img class="candyland" src="boardgame.png" alt="Board Games">
     <p>Candy Land</p>
