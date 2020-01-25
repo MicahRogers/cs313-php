@@ -17,6 +17,12 @@ var candyland = { name: "Candy Land", price : 14.99, quantity : 1};
 function myFunction() {
   alert("Hello! I am an alert box!");
 }
+  function addToCart()
+  {  
+    alert("Hello! I am an alert box!!");
+
+  }
+
 
 </script>
 <title>Shopping</title>
