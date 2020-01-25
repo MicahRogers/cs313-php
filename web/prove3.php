@@ -29,11 +29,7 @@ function myFunction() {
         cartItem.quantity++;
       }
     }   
-    if (!found)
-    {
 
-    }
-    <?php echo $_SESSION["cart"];?>
   }
 
 
