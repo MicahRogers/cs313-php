@@ -23,9 +23,10 @@ $_SESSION[cart] = array();
   public $price;
   public $quantity;
   }
-function al(){
-alert("Hello! I am an alert box!!");
 
+function test()
+{
+alert("alert");
 }
   function addToCart(Item $newItem)
   {  
@@ -57,6 +58,8 @@ alert("Hello! I am an alert box!!");
   <h1>Products</h1>
 </header>
 <body>
+    <button type="button" onclick="test()">test</button>
+
 <div class="row">
   <div class="col-4 col-s-6"><img class="wayofkings" src="wayofkings.png" alt="The Way of Kings">
     <p>The Way of Kings</p>
@@ -68,7 +71,7 @@ alert("Hello! I am an alert box!!");
   </div>
   <div class="col-4 col-s-6"><img class="candyland" src="boardgame.png" alt="Board Games">
     <p>Candy Land</p>
-    <button type="button" onclick="al()">Add to Cart</button>
+    <button type="button" onclick="addToCart(new Item ("Candyland", 14.99))">Add to Cart</button>
   </div>  
 </div>
 </body>
