@@ -19,9 +19,9 @@ function myFunction() {
 }
 
 function addToCart(newItem)
-{  
+{    <?php
 alert(count($_SESSION["cart"]));
-  <?php
+
   array_push($_SESSION["cart"], newItem);
   ?>
 }
