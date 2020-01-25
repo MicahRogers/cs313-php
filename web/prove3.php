@@ -20,10 +20,10 @@ function myFunction() {
 
 function addToCart(newItem)
 {  
-alert(newItem.name);
+alert(count($_SESSION["cart"]));
   <?php
-  array_push($_SESSION["cart"] ?>, newItem);
- 
+  array_push($_SESSION["cart"], newItem);
+  ?>
 }
 
 
