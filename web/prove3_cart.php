@@ -26,7 +26,7 @@ session_start();
   <?php 
     for ($i = 0; $i < count($_SESSION["cart"]); $i++)
 {
-      echo count($_SESSION["cart"]);
+      echo ($_SESSION["cart"][$i]);
 }
   ?>
 </body>
