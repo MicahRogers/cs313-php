@@ -17,14 +17,14 @@ var candyland = { name: "Candy Land", price : 14.99, quantity : 1};
 function myFunction() {
   alert("Hello! I am an alert box!");
 }
-
+<?php
 function addToCart(newItem)
 {  
 
   array_push($_SESSION["cart"], newItem);
 
 }
-
+?>
 
 </script>
 <title>Shopping</title>
@@ -46,7 +46,7 @@ function addToCart(newItem)
   </div>
   <div class="col-4 col-s-6"><img class="pingpong" src="pingpong.png" alt="Ping Pong">
     <p>Ping Pong Table: Two paddles and one ball included</p>
-    <button onclick="addToCart(pingpong)">Add to Cart</button>
+    <button onclick=<?php "addToCart(pingpong)" ?>>Add to Cart</button>
   </div>
   <div class="col-4 col-s-6"><img class="candyland" src="boardgame.png" alt="Board Games">
     <p>Candy Land</p>
