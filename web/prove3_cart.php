@@ -24,7 +24,10 @@ session_start();
 </header>
 <body>
   <?php 
-    echo $_SESSION["cart"][0]["name"];
+    foreach ($_SESSION["cart"] as $item)
+{
+      echo $item;
+}
   ?>
 </body>
 </html>
