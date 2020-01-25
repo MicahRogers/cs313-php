@@ -23,9 +23,9 @@ function addToCart(newItem)
 
   array_push(_SESSION["cart"], $newItem);
     
-    foreach (<?php $_SESSION["cart"] as $cartItem ?>)
+    foreach ($_SESSION["cart"] as $cartItem)
     {
-      alert("addding " + <?php $cartItem.$name ?>);
+      alert("addding " + $cartItem.$name);
     }
 }
 
