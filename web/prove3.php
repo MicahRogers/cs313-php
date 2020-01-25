@@ -20,9 +20,9 @@ function myFunction() {
   <?php
 function addToCart(newItem)
 {  
-  <?php
+
   array_push($_SESSION["cart"], newItem);
-  ?>
+
 }
 
 
