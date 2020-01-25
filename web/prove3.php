@@ -21,17 +21,10 @@ function myFunction() {
 function addToCart(newItem)
 {    
   <?php
-  array_push($_SESSION["cart"], newItem);
+  array_push($_SESSION["cart"], cat);
   ?>
 }
-  <?php
-function addToCart2($newItem)
-{    
 
-  array_push($_SESSION["cart"], $newItem);
-
-}
-?>
 </script>
 <title>Shopping</title>
 </head>
@@ -48,11 +41,11 @@ function addToCart2($newItem)
 <div class="row">
   <div class="col-4 col-s-6"><img class="wayofkings" src="wayofkings.png" alt="The Way of Kings">
     <p>The Way of Kings</p>
-    <button onclick="addToCart2("The Way of Kings")">Add to Cart</button>
+    <button onclick="addToCart(book)">Add to Cart</button>
   </div>
   <div class="col-4 col-s-6"><img class="pingpong" src="pingpong.png" alt="Ping Pong">
     <p>Ping Pong Table: Two paddles and one ball included</p>
-    <button onclick="addToCart2("Ping Pong")">Add to Cart</button>
+    <button onclick="addToCart(pingpong)">Add to Cart</button>
   </div>
   <div class="col-4 col-s-6"><img class="candyland" src="boardgame.png" alt="Board Games">
     <p>Candy Land</p>
