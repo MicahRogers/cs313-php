@@ -20,24 +20,9 @@ function myFunction() {
 <?php
   function addToCart($newItem)
   {  
-    var $found = false;
-    if(isset($_SESSION["cart"])){
-      foreach ($_SESSION["cart"] as $cartItem)
-      {
-        if ($newItem == $cartItem)
-        {
-          $found = true;
-          
-        }
-      }   
-      if (!$found)
-      {
-        array_push($_SESSION["cart"], $newItem);
-      }
-    }
-?>
-  }
 
+  }
+?>
 
 
 </script>
