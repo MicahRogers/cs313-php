@@ -22,11 +22,11 @@ function addToCart(newItem)
 {  
 
   array_push(_SESSION["cart"], $newItem);
-    <?php
-    foreach ($_SESSION["cart"] as $cartItem)
+    
+    foreach (<?php $_SESSION["cart"] as $cartItem ?>)
     {
-      alert("addding " + $cartItem.$name);
-    }?>
+      alert("addding " + <?php $cartItem.$name ?>);
+    }
 }
 
 
