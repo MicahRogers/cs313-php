@@ -27,9 +27,9 @@ function addToCart(newItem)
 function addBook()
 {    
   <?php
-    $_SESSION["cart"][count($_SESSION["cart"]) - 1])["name"] = "The Way of Kings";
-    $_SESSION["cart"][count($_SESSION["cart"]) - 1])["price"] = 9.99;
-    $_SESSION["cart"][count($_SESSION["cart"]) - 1])["quantity"] = 1;
+    $_SESSION["cart"][count($_SESSION["cart"]) - 1]["name"] = "The Way of Kings";
+    $_SESSION["cart"][count($_SESSION["cart"]) - 1]["price"] = 9.99;
+    $_SESSION["cart"][count($_SESSION["cart"]) - 1]["quantity"] = 1;
   ?>
 }
 function addPingpong()
