@@ -21,12 +21,8 @@ function myFunction() {
 function addToCart(newItem)
 {  
 
-  array_push(_SESSION["cart"], $newItem);
+  array_push($_SESSION["cart"], newItem);
     
-    foreach ($_SESSION["cart"] as $cartItem)
-    {
-      alert("addding " + $cartItem.$name);
-    }
 }
 
 
