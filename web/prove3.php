@@ -23,7 +23,7 @@ $_SESSION[cart] = array();
   public $price;
   public $quantity;
   }
-function al{
+function al(){
 alert("Hello! I am an alert box!!");
 
 }
