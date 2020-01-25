@@ -9,7 +9,7 @@ session_start();
 <link rel="stylesheet" type="text/css" href="prove3.css">
 
 <script>
-<?php $_SESSION["cart"] = array();?>
+
 var book = { name: "The Way of Kings", price : 9.99, quantity : 1};
 var pingpong = { name: "Ping Pong Table", price : 99.99, quantity : 1};
 var candyland = { name: "Candy Land", price : 14.99, quantity : 1};
