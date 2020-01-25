@@ -18,6 +18,16 @@ function myFunction() {
   alert("Hello! I am an alert box!");
 }
 
+</script>
+<title>Shopping</title>
+</head>
+<header>
+  <a href="prove3_cart.php">
+  <p>|Cart|</p>
+  </a>
+
+  <h1>Products</h1>
+</header>
 <body>
 <button onclick="myFunction()">Try it</button>
 
