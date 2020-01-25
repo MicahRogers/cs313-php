@@ -9,7 +9,7 @@ session_start();
 <link rel="stylesheet" type="text/css" href="prove3.css">
 
 <script>
-  $_SESSION["cart"] = array();
+
   class Item
   {
   constructor(newName, newPrice)
@@ -18,9 +18,9 @@ session_start();
     this.price; = newPrice;
     this.quantity = 1;
   }
-  public var name;
-  public var price;
-  public var quantity;
+  public name;
+  public price;
+  public quantity;
   }
 
 function myFunction() {
@@ -28,9 +28,10 @@ function myFunction() {
 }
   function addToCart(Item newItem)
   {  
-alert("Hello! I am an alert box!!");
+    alert("Hello! I am an alert box!!");
+    <?php
     var found = false;
-
+    $_SESSION["cart"] = array();
     foreach ($_SESSION["cart"] as cartItem)
     {
       if (newItem.name == cartItem.name)
@@ -44,6 +45,7 @@ alert("Hello! I am an alert box!!");
       <$_SESSION["cart"].push(newItem);
     }
     echo $_SESSION["cart"];
+    ?>
   }
 
 </script>
