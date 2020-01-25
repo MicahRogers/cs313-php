@@ -20,15 +20,14 @@ function myFunction() {
 <?php
   function addToCart($newItem)
   {  
-    alert("Hello! I am an alert box!!");
     var $found = false;
 
     foreach ($_SESSION["cart"] as $cartItem)
     {
-      if ($newItem.name == $cartItem.name)
+      if ($newItem.name == $cartItem.$name)
       {
         $found = true;
-        $cartItem.quantity++;
+        $cartItem.$quantity++;
       }
     }   
     if (!$found)
