@@ -17,16 +17,27 @@ var candyland = { name: "Candy Land", price : 14.99, quantity : 1};
 function myFunction() {
   alert("Hello! I am an alert box!");
 }
-  function addToCart(newItem)
+<?php
+  function addToCart($newItem)
   {  
     alert("Hello! I am an alert box!!");
-    var found = false;
-    foreach (<?php $_SESSION["cart"]?> as cartItem)
+    var $found = false;
+    foreach ($_SESSION["cart"] as $cartItem)
     {
-
+      if ($newItem.name == $cartItem.name)
+      {
+        $found = true;
+        $cartItem.quantity++;
+      }
     }   
-
+    if (!found)
+    {
+      $_SESSION["cart"].push(newItem);
+    }
+     echo $_SESSION["cart"];
+    ?>
   }
+
 
 
 </script>
