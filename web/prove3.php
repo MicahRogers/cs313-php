@@ -13,7 +13,12 @@ session_start();
 $_SESSION[cart] = array();
   class Item
   {
-
+  constructor($newName, $newPrice)
+  { 
+    this.$name = $newName;
+    this.$price; = $newPrice;
+    this.$quantity = 1;
+  }
   public $name;
   public $price;
   public $quantity;
@@ -30,6 +35,7 @@ function myFunction() {
   {  
 alert("Hello! I am an alert box!!");
     var found = false;
+<?php
     foreach ($_SESSION[cart] as $cartItem)
     {
       if ($newItem.$name == $cartItem.$name)
@@ -44,7 +50,7 @@ alert("Hello! I am an alert box!!");
     }
    echo $_SESSION[cart];
   }
-
+?>
 </script>
 <title>Shopping</title>
 </head>
