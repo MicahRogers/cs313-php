@@ -20,7 +20,7 @@ function myFunction() {
 
 function addToCart(newItem)
 {  
-  <?php array_push(_SESSION["cart"], $newItem); ?>
+  array_push(_SESSION["cart"], $newItem);
 }
 
 
