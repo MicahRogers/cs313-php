@@ -18,13 +18,32 @@ function myFunction() {
   alert("Hello! I am an alert box!");
 }
 
-function addToCart($newItem)
+function addToCart(newItem)
 {    
   <?php
-  array_push($_SESSION["cart"], $newItem);
+  array_push($_SESSION["cart"], newItem);
   ?>
 }
-
+function addBook()
+{    
+  <?php
+    $_SESSION["cart"][count($_SESSION["cart"]) - 1])["name"] = "The Way of Kings";
+    $_SESSION["cart"][count($_SESSION["cart"]) - 1])["price"] = 9.99;
+    $_SESSION["cart"][count($_SESSION["cart"]) - 1])["quantity"] = 1;
+  ?>
+}
+function addPingpong()
+{    
+  <?php
+  array_push($_SESSION["cart"], newItem);
+  ?>
+}
+function addCandyland()
+{    
+  <?php
+  array_push($_SESSION["cart"], newItem);
+  ?>
+}
 </script>
 <title>Shopping</title>
 </head>
