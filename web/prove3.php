@@ -19,13 +19,18 @@ function myFunction() {
 }
 
 function addToCart(newItem)
-{    <?php
-alert(count($_SESSION["cart"]));
-
+{    
+  <?php
   array_push($_SESSION["cart"], newItem);
   ?>
 }
 
+function addToCart2(newItem)
+{    
+  <?php
+  array_push($_SESSION["cart"], newItem);
+  ?>
+}
 
 </script>
 <title>Shopping</title>
@@ -43,7 +48,7 @@ alert(count($_SESSION["cart"]));
 <div class="row">
   <div class="col-4 col-s-6"><img class="wayofkings" src="wayofkings.png" alt="The Way of Kings">
     <p>The Way of Kings</p>
-    <button onclick="addToCart(book)">Add to Cart</button>
+    <button onclick="addToCart2("The Way of Kings")">Add to Cart</button>
   </div>
   <div class="col-4 col-s-6"><img class="pingpong" src="pingpong.png" alt="Ping Pong">
     <p>Ping Pong Table: Two paddles and one ball included</p>
