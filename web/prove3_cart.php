@@ -24,7 +24,7 @@ session_start();
 </header>
 <body>
   <?php 
-    echo $_SESSION["cart"][0];
+    echo $_SESSION["cart"][0].name;
   ?>
 </body>
 </html>
