@@ -24,9 +24,10 @@ session_start();
 </header>
 <body>
   <?php 
-echo "cats are cool";
-    foreach ($_SESSION[cart] as $cartItem)
-    {
+    echo "cats are cool";
+    foreach ($_SESSION["cart"] as $cartItem)
+    { 
+alert("CART STUFF");
       echo $cartItem.$name + "name<br>";
       echo $cartItem.$price + "price<br>";
       echo $cartItem.$quantity + "quantity<br><br>";
