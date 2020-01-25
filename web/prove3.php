@@ -13,15 +13,15 @@ session_start();
 $_SESSION[cart] = array();
   class Item
   {
-  constructor($newName, $newPrice)
+  constructor(newName, newPrice)
   { 
-    this.$name = $newName;
-    this.$price; = $newPrice;
-    this.$quantity = 1;
+    this.name = newName;
+    this.price; = newPrice;
+    this.quantity = 1;
   }
-  public $name;
-  public $price;
-  public $quantity;
+  public var name;
+  public var price;
+  public var quantity;
   }
 
 function test()
@@ -35,22 +35,22 @@ function myFunction() {
   {  
 alert("Hello! I am an alert box!!");
     var found = false;
-<?php
-    foreach ($_SESSION[cart] as $cartItem)
+
+    foreach ($_SESSION[cart] as cartItem)
     {
-      if ($newItem.$name == $cartItem.$name)
+      if (newItem.name == cartItem.$name)
       {
         found = true;
-        $cartItem.$quantity++;
+        cartItem.quantity++;
       }
     }   
     if (!found)
     {
-      $_SESSION[cart].push($newItem);
+      $_SESSION[cart].push(newItem);
     }
    echo $_SESSION[cart];
   }
-?>
+
 </script>
 <title>Shopping</title>
 </head>
