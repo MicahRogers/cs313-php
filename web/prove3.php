@@ -30,7 +30,7 @@ function myFunction() {
   {  
     alert("Hello! I am an alert box!!");
     var found = false;
-    foreach (<?php $_SESSION["cart"] ?> as cartItem)
+    foreach (<?php $_SESSION["cart"]?> as cartItem)
     {
       if (newItem.name == cartItem.name)
       {
@@ -40,7 +40,7 @@ function myFunction() {
     }   
     if (!found)
     {
-      <<?php $_SESSION["cart"].push(newItem);?>
+      <<?php $_SESSION["cart"]?>.push(newItem);
     }
     <?php echo $_SESSION["cart"];?>
   }
