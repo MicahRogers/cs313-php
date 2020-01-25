@@ -20,12 +20,12 @@ function myFunction() {
 
 function addToCart(newItem)
 {  
-  alert("Adding!");
+
   array_push(_SESSION["cart"], $newItem);
     <?php
     foreach ($_SESSION["cart"] as $cartItem)
     {
-      alert($cartItem.$name);
+      alert("addding " + $cartItem.$name);
     }?>
 }
 
