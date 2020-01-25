@@ -29,23 +29,7 @@ function myFunction() {
   function addToCart(Item newItem)
   {  
     alert("Hello! I am an alert box!!");
-    <?php
-    var found = false;
-    $_SESSION["cart"] = array();
-    foreach ($_SESSION["cart"] as cartItem)
-    {
-      if (newItem.name == cartItem.name)
-      {
-        found = true;
-        cartItem.quantity++;
-      }
-    }   
-    if (!found)
-    {
-      <$_SESSION["cart"].push(newItem);
-    }
-    echo $_SESSION["cart"];
-    ?>
+
   }
 
 </script>
