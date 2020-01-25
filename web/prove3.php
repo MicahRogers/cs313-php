@@ -23,11 +23,7 @@ function myFunction() {
     var found = false;
     foreach (<?php $_SESSION["cart"]?> as cartItem)
     {
-      if (newItem.name == cartItem.name)
-      {
-        found = true;
-        cartItem.quantity++;
-      }
+
     }   
 
   }
