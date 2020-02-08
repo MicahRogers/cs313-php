@@ -42,6 +42,32 @@ if(isset($_POST["coop_or_comp"])){
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
   }
+
+  if ($publisher != NULL)
+{
+  $query = "SELECT * FROM boardgames WHERE publisher_id = '$publisher'";
+}
+
+  if ($min_players != NULL)
+{
+  $query = "SELECT * FROM boardgames WHERE boardgame_min_players >= '$min_players'";
+}
+
+  if ($max_players != NULL)
+{
+  $query = "SELECT * FROM boardgames WHERE boardgame_max_players = '$boardgame_max_players'";
+}
+
+  if ($coop_or_comp != NULL)
+{
+  $query = "SELECT * FROM boardgames WHERE boardgame_coop_or_comp = '$coop_or_comp'";
+}
+
+
+  foreach ($db->query($query) as $row)
+  {
+   print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
+  }
 ?>
  
 <!DOCTYPE html>
