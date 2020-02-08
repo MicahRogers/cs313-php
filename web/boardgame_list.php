@@ -44,11 +44,9 @@ if(isset($_POST["coop_or_comp"])){
   }
 
 
-  if ($publisher != NULL)
-{
-  $query = "SELECT * FROM boardgames 
-  WHERE  publisher_id = '$publisher'";
-}  
+print "$publisher";
+  $query = "SELECT * FROM boardgames WHERE  publisher_id = '$publisher'";
+
 foreach ($db->query($query) as $row)
   {
    print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
