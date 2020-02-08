@@ -1,7 +1,6 @@
 <?php
   session_start();
 
-print "<h1>Scripture Resources</h1>";
   $dbUrl = getenv('DATABASE_URL');
 
   if (empty($dbUrl)) {
@@ -48,6 +47,7 @@ Publisher
   <option value=2>Hasbro</option>
   <option value=3>Test Publisher</option>
 </select>
+<br>
 Minimum Players
 <select name="min_players">
   <option value=1>1</option>
@@ -59,6 +59,7 @@ Minimum Players
   <option value=7>7</option>
   <option value=8>8</option>
 </select>
+<br>
 Maximum Players
 <select name="min_players">
   <option value=2>2</option>
@@ -77,6 +78,7 @@ Maximum Players
   <option value=15>15</option>
   <option value=16>16</option>
 </select>
+<br>
 Cooperative or Competitive
 <select name="min_players">
   <option value=0>cooperative</option>
