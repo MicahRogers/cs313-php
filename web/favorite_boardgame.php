@@ -52,6 +52,7 @@ Publisher
 <br>
 Minimum Players
 <select name="min_players">
+  <option value=>Any</option>
   <option value=1>1</option>
   <option value=2>2</option>
   <option value=3>3</option>
@@ -64,6 +65,7 @@ Minimum Players
 <br>
 Maximum Players
 <select name="min_players">
+  <option value=>Any</option>
   <option value=2>2</option>
   <option value=3>3</option>
   <option value=4>4</option>  
@@ -83,6 +85,7 @@ Maximum Players
 <br>
 Cooperative or Competitive
 <select name="min_players">
+  <option value=>Either</option>
   <option value=0>cooperative</option>
   <option value=1>competitive</option>
 </select>
