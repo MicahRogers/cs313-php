@@ -62,7 +62,7 @@ Minimum Players
 </select>
 <br>
 Maximum Players
-<select name="min_players">
+<select name="max_players">
   <option value=>Any</option>
   <option value=2>2</option>
   <option value=3>3</option>
