@@ -49,8 +49,29 @@ else
 {
 print "not null";
 }
+if ( $min_players == NULL)
+{print "null";
+}
+else
+{
+print "not null";
+}
+if ( $publisher == NULL)
+{print "null";
+}
+else
+{
+print "not null";
+}
+if ( $max_players == NULL)
+{print "null";
+}
+else
+{
+print "not null";
+}
 
-print "$publisher";
+print "$coop_or_comp";
   $query = "SELECT * FROM boardgames WHERE  publisher_id = '$publisher'";
 
 foreach ($db->query($query) as $row)
