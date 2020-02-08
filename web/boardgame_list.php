@@ -1,6 +1,7 @@
-php
+<?php
   session_start();
 
+print h1Scripture Resourcesh1;
   $dbUrl = getenv('DATABASE_URL');
 
   if (empty($dbUrl)) {
@@ -23,20 +24,4 @@ php
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
   }
-?>
- 
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="homepage.css">
-<title>Boardgames</title>
-</head>
-<header>
-  <h1>Search for Boardgames</h1>
-</header>
-<body>
-  HELLO
-</body>
-
-</html>
+  
