@@ -10,8 +10,8 @@ CREATE TABLE publishers (
 CREATE TABLE boardgames (
     boardgame_id              SERIAL PRIMARY KEY,
     boardgame_name            varchar(40) UNIQUE,
-    boardgame_min_num_players int,
-    boardgame_max_num_players int,
+    boardgame_min_players int,
+    boardgame_max_players int,
     boardgame_coop_or_comp    int,
     publisher_id              int NOT NULL REFERENCES publishers(publisher_id)
 );

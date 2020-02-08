@@ -1,21 +1,39 @@
 <?php
   session_start();
+  
+  $publishers;
+if(isset($_POST["publishers"])){
+    $publishers = $_POST["publishers"];
+}
+$min_players;
+if(isset($_POST["min_players"])){
+    $min_players = $_POST["min_players"];
+} 
+$min_players;
+if(isset($_POST["min_players"])){
+    $min_players = $_POST["min_players"];
+}  
+$coop_or_comp;
+if(isset($_POST["coop_or_comp"])){
+    $coop_or_comp = $_POST["coop_or_comp"];
+}  
 
-print h1Scripture Resourcesh1;
   $dbUrl = getenv('DATABASE_URL');
 
   if (empty($dbUrl)) {
-    example localhost configuration URL with postgres username and a database called cs313db
-   $dbUrl = postgrespostgrespassword@localhost5432cs313db;
+   // example localhost configuration URL with postgres username and a database called cs313db
+   $dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
   }
   
   $dbopts = parse_url($dbUrl);
   
-  $dbHost = $dbopts[host];
-  $dbPort = $dbopts[port];
-  $dbUser = $dbopts[user];
-  $dbPassword = $dbopts[pass];
-  $dbName = ltrim($dbopts[path],'');
+  $dbHost = $dbopts["host"];
+  $dbPort = $dbopts["port"];
+  $dbUser = $dbopts["user"];
+  $dbPassword = $dbopts["pass"];
+  $dbName = ltrim($dbopts["path"],'/');
+  
+  //print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
   
   try {
    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
@@ -24,4 +42,17 @@ print h1Scripture Resourcesh1;
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
   }
-  
+?>
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="homepage.css">
+<title>Boardgames</title>
+</head>
+<body>
+
+</body>
+
+</html>
