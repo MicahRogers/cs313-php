@@ -7,8 +7,8 @@
   $min_players;
   $min_players = $_POST["min_players"];
 
-  $min_players;
-  $min_players = $_POST["min_players"];
+  $max_players;
+  $max_players = $_POST["max_players"];
  
   $coop_or_comp;
   $coop_or_comp = $_POST["coop_or_comp"];
