@@ -42,7 +42,13 @@ if(isset($_POST["coop_or_comp"])){
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
   }
-
+if ( $publisher == NULL)
+{print "null";
+}
+else
+{
+print "not null";
+}
 
 print "$publisher";
   $query = "SELECT * FROM boardgames WHERE  publisher_id = '$publisher'";
