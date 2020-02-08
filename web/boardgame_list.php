@@ -50,7 +50,11 @@ if(isset($_POST["coop_or_comp"])){
   WHERE  publisher_id = '$publisher'
   AND    boardgame_min_players <= '$min_players' 
   AND    boardgame_max_players >= '$max_players'
-  AND    boardgame_coop_or_comp = '$coop_or_comp'";
+  AND    boardgame_coop_or_comp = '$coop_or_comp'
+  OR     publisher_id           IS NULL
+  OR     boardgame_min_players  IS NULL
+  OR     boardgame_max_players  IS NULL
+  OR     boardgame_coop_or_comp IS NULL";
 }  
 foreach ($db->query($query) as $row)
   {
