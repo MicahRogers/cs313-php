@@ -1,19 +1,23 @@
 <?php
   session_start();
 
+print "<h1>Scripture Resources</h1>";
   $dbUrl = getenv('DATABASE_URL');
 
   if (empty($dbUrl)) {
-   $dbUrl = postgrespostgrespassword@localhost5432cs313db;
+   // example localhost configuration URL with postgres username and a database called cs313db
+   $dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
   }
   
   $dbopts = parse_url($dbUrl);
   
-  $dbHost = $dbopts[host];
-  $dbPort = $dbopts[port];
-  $dbUser = $dbopts[user];
-  $dbPassword = $dbopts[pass];
-  $dbName = ltrim($dbopts[path],'');
+  $dbHost = $dbopts["host"];
+  $dbPort = $dbopts["port"];
+  $dbUser = $dbopts["user"];
+  $dbPassword = $dbopts["pass"];
+  $dbName = ltrim($dbopts["path"],'/');
+  
+  //print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
   
   try {
    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
@@ -23,6 +27,7 @@
    die();
   }
 ?>
+
  
 <!DOCTYPE html>
 <html>
