@@ -24,7 +24,7 @@ function addToCart(newItem)
   array_push($_SESSION["cart"], newItem);
   ?>
 }
-function addBook()
+function addtoCart2()
 {    
   <?php
     $_SESSION["cart"][count($_SESSION["cart"]) - 1]["name"] = "The Way of Kings";
