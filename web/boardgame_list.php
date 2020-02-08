@@ -38,7 +38,7 @@
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
   }
-if ( $publisher == NULL)
+if ( $publishers == NULL)
 {print "null";
 }
 else
