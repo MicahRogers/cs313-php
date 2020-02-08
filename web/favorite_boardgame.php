@@ -40,11 +40,9 @@
 </header>
 <body>
 <form action="boardgame_list.php" method="POST">
-Name
-<input name="boardgame" type="text">
-<br>
 Publisher
 <select name="publishers">
+  <option value=>Any</option>
   <option value=1>Z-Man Games</option>
   <option value=2>Hasbro</option>
   <option value=3>Test Publisher</option>
