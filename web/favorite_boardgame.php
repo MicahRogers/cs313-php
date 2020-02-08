@@ -40,7 +40,9 @@
 </header>
 <body>
 <form action="boardgame_list.php" method="POST">
+Name
 <input name="boardgame" type="text">
+<br>
 Publisher
 <select name="publishers">
   <option value=1>Z-Man Games</option>
@@ -84,6 +86,7 @@ Cooperative or Competitive
   <option value=0>cooperative</option>
   <option value=1>competitive</option>
 </select>
+<br>
 <input type="submit" name= "submit" value="Submit">
 </form>
 </body>
