@@ -2,21 +2,17 @@
   session_start();
   
   $publishers;
-if(isset($_POST["publishers"])){
-    $publishers = $_POST["publishers"];
-}
-$min_players;
-if(isset($_POST["min_players"])){
-    $min_players = $_POST["min_players"];
-} 
-$min_players;
-if(isset($_POST["min_players"])){
-    $min_players = $_POST["min_players"];
-}  
-$coop_or_comp;
-if(isset($_POST["coop_or_comp"])){
-    $coop_or_comp = $_POST["coop_or_comp"];
-}  
+  $publishers = $_POST["publishers"];
+
+  $min_players;
+  $min_players = $_POST["min_players"];
+
+  $min_players;
+  $min_players = $_POST["min_players"];
+ 
+  $coop_or_comp;
+  $coop_or_comp = $_POST["coop_or_comp"];
+
 
   $dbUrl = getenv('DATABASE_URL');
 
