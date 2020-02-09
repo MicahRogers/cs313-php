@@ -54,7 +54,7 @@ if ($publisher != null)
 }
 else
 {
-  $pub = "publisher_id !='";
+  $pub = "publisher_id !=\"";
 }
 print "<br>";
 print "publisher_id = '$publisher'";
