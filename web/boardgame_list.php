@@ -56,6 +56,14 @@ else
 {
   $pub = "publisher_id = publisher_id";
 }
+if ($min_players != null)
+{
+  $min = "boardgame_min_players = '$min_players";
+}
+else
+{
+  $min = "boardgame_min_players = boardgame_min_players";
+}
 print "<br>";
 print "publisher_id = '$publisher'";
 print "<br>";
@@ -69,7 +77,7 @@ print "<br>";
 print $query;
   $query = "SELECT * FROM boardgames 
   WHERE  $pub
-  AND    boardgame_min_players <= '$min_players'
+  AND    $min
   AND    boardgame_max_players >= '$max_players'
   AND    boardgame_coop_or_comp = '$coop_or_comp'";
 print "<br>";
