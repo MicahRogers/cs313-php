@@ -43,10 +43,10 @@
 Publisher
 <select name="publisher">
   <option value=>Any</option>
-  <option value=0>Z-Man Games</option>
-  <option value=1>Hasbro</option>
-  <option value=2>Test Publisher</option>
-  <option value=3>Other</option>
+  <option value=2>Z-Man Games</option>
+  <option value=3>Hasbro</option>
+  <option value=4>Test Publisher</option>
+  <option value=5>Other</option>
 </select>
 <br>
 Minimum Players
