@@ -58,7 +58,7 @@ else
 }
 if ($min_players != null)
 {
-  $min = "boardgame_min_players <= '$min_players";
+  $min = "boardgame_min_players <= '$min_players'";
 }
 else
 {
@@ -66,7 +66,7 @@ else
 }
 if ($max_players != null)
 {
-  $max = "boardgame_max_players >= '$max_players";
+  $max = "boardgame_max_players >= '$max_players'";
 }
 else
 {
@@ -74,7 +74,7 @@ else
 }
 if ($coop_or_comp != null)
 {
-  $cc = "boardgame_coop_or_comp = '$coop_or_comp";
+  $cc = "boardgame_coop_or_comp = '$coop_or_comp'";
 }
 else
 {
