@@ -78,7 +78,7 @@ if ($coop_or_comp != null)
 }
 else
 {
-  $cc = "boardgame_coop_or_comp = \"Competitive\" OR boardgame_coop_or_comp = \"Cooperative\"";
+  $cc = "boardgame_coop_or_comp = boardgame_coop_or_comp";
 }
 print "<br>";
 print "publisher_id = '$publisher'";
