@@ -79,6 +79,18 @@ foreach ($db->query($query) as $row)
    print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
   }
 
+  $query = "SELECT * FROM boardgames 
+  WHERE  " . '$pub' . "
+  AND    boardgame_min_players <= '$min_players'
+  AND    boardgame_max_players >= '$max_players'
+  AND    boardgame_coop_or_comp = '$coop_or_comp'";
+print "<br>";
+print $query;
+foreach ($db->query($query) as $row)
+  {
+   print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
+  }
+
 ?>
  
 <!DOCTYPE html>
