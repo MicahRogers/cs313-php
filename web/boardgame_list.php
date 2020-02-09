@@ -56,8 +56,9 @@ else
 {
   $pub = "publisher_id != NULL";
 }
-
+print "<br>;
 print "publisher_id = '$publisher'";
+print "<br>;
 print $pub;
 
   $query = "SELECT * FROM boardgames 
