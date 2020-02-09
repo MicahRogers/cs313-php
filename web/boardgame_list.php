@@ -54,7 +54,7 @@ if ($publisher != null)
 }
 else
 {
-  $pub = "publisher_id =\"";
+  $pub = "publisher_id = publisher_id";
 }
 print "<br>";
 print "publisher_id = '$publisher'";
@@ -74,11 +74,6 @@ print $query;
   AND    boardgame_coop_or_comp = '$coop_or_comp'";
 print "<br>";
 print $query;
-foreach ($db->query($query) as $row)
-  {
-   print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
-  }
-
 foreach ($db->query($query) as $row)
   {
    print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
