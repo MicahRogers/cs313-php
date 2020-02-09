@@ -3,7 +3,6 @@
   
   $publisher;
   $publisher = $_POST["publisher"];
-print $publisher;
 
   $min_players;
   $min_players = $_POST["min_players"];
@@ -85,6 +84,9 @@ else
   AND    $cc";
 print "<br>";
 print $query;
+print "<br>";
+ print $publisher;
+print "<br>";
 foreach ($db->query($query) as $row)
   {
    print "<p>Name: $row[1] | " . "Min Players: $row[2] | " . "Max Players $row[3] | " . "$row[4] | " . " Publisher: $row[5]</p>\n\n";
