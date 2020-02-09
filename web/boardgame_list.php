@@ -50,36 +50,10 @@ $cc;
 
 if ($publisher != null)
 {
-  $pub = publisher_id = '$publisher'
+  $pub = "publisher_id = '$publisher'";
 }
-else
-{
-  $pub = publisher_id != null
-}
-if ($max_players != null)
-{
-  $max = boardgame_max_players = '$max_players'
-}
-else
-{
-  $max = boardgame_max_players != null
-}
-if ($min_players != null)
-{
-  $min = boardgame_min_players = '$min_players'
-}
-else
-{
-  $min = boardgame_min_players != null
-}
-if ($coop_or_comp != null)
-{
-  $cc = boardgame_coop_or_comp = '$coop_or_comp'
-}
-else
-{
-  $cc = boardgame_coop_or_comp != null
-}
+
+
 
   $query = "SELECT * FROM boardgames 
   WHERE  publisher_id = '$publisher'
