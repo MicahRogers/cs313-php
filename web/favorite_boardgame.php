@@ -41,7 +41,7 @@
 <body>
 <form action="boardgame_list.php" method="POST">
 Publisher
-<select name="publishers">
+<select name="publisher">
   <option value=>Any</option>
   <option value=1>Z-Man Games</option>
   <option value=2>Hasbro</option>

@@ -1,8 +1,8 @@
 <?php
   session_start();
   
-  $publishers;
-  $publishers = $_POST["publishers"];
+  $publisher;
+  $publisher = $_POST["publisher"];
 
   $min_players;
   $min_players = $_POST["min_players"];
@@ -38,9 +38,11 @@
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
   }
-if ( $publishers == NULL)
-{print "null";
-}
+print $publisher;
+print $min_players;
+print $max_players;
+print $coop_or_comp;
+
 else
 {
 print "not null";
