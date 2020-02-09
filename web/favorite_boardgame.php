@@ -84,9 +84,9 @@ Maximum Players
 <br>
 Cooperative or Competitive
 <select name="coop_or_comp">
-  <option value="either"=>Either</option>
-  <option value="Cooperative">cooperative</option>
-  <option value=+Competitive">competitive</option>
+  <option value=either=>Either</option>
+  <option value=Cooperative>cooperative</option>
+  <option value=Competitive>competitive</option>
 </select>
 <br>
 <input type="submit" name= "submit" value="Submit">
