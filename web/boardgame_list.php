@@ -47,7 +47,7 @@ print "$coop_or_comp ";
 
 foreach ($db->query($query) as $row)
   {
-   print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
+   print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4].value\"</p>\n\n";
   }
 
   if ($min_players != NULL)
