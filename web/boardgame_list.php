@@ -64,6 +64,22 @@ else
 {
   $min = "boardgame_min_players = boardgame_min_players";
 }
+if ($max_players != null)
+{
+  $max = "boardgame_max_players = '$max_players";
+}
+else
+{
+  $max = "boardgame_max_players = boardgame_max_players";
+}
+if ($coop_or_comp != null)
+{
+  $cc = "boardgame_coop_or_comp = '$coop_or_comp";
+}
+else
+{
+  $min = "boardgame_coop_or_comp = boardgame_coop_or_comp";
+}
 print "<br>";
 print "publisher_id = '$publisher'";
 print "<br>";
@@ -78,8 +94,8 @@ print $query;
   $query = "SELECT * FROM boardgames 
   WHERE  $pub
   AND    $min
-  AND    boardgame_max_players >= '$max_players'
-  AND    boardgame_coop_or_comp = '$coop_or_comp'";
+  AND    $max
+  AND    $cc";
 print "<br>";
 print $query;
 foreach ($db->query($query) as $row)
