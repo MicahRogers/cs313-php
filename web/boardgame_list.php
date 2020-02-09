@@ -58,7 +58,7 @@ else
 }
 if ($min_players != null)
 {
-  $min = "boardgame_min_players = '$min_players";
+  $min = "boardgame_min_players <= '$min_players";
 }
 else
 {
@@ -66,7 +66,7 @@ else
 }
 if ($max_players != null)
 {
-  $max = "boardgame_max_players = '$max_players";
+  $max = "boardgame_max_players >= '$max_players";
 }
 else
 {
