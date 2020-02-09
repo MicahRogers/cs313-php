@@ -3,6 +3,7 @@
   
   $publisher;
   $publisher = $_POST["publisher"];
+print $publisher;
 
   $min_players;
   $min_players = $_POST["min_players"];
