@@ -50,7 +50,7 @@ if ($publisher != null)
 }
 else
 {
-  $pub = "(SELECT publisher_name FROM publishers) = (SELECT publisher_name FROM publishers)";
+  $pub = "publisher_id = publisher_id";
 }
 if ($min_players != null)
 {
@@ -82,11 +82,7 @@ else
   AND    $min
   AND    $max
   AND    $cc";
-print "<br>";
-print $query;
-print "<br>";
- print $publisher;
-print "<br>";
+
 foreach ($db->query($query) as $row)
   {
    print "<p>Name: $row[1] | " . "Min Players: $row[2] | " . "Max Players $row[3] | " . "$row[4]</p>\n\n";
