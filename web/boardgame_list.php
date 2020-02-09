@@ -60,7 +60,13 @@ print "<br>";
 print "publisher_id = '$publisher'";
 print "<br>";
 print $pub;
-
+  $query = "SELECT * FROM boardgames 
+  WHERE  publisher_id = '$publisher'
+  AND    boardgame_min_players <= '$min_players'
+  AND    boardgame_max_players >= '$max_players'
+  AND    boardgame_coop_or_comp = '$coop_or_comp'";
+print "<br>";
+print $query;
   $query = "SELECT * FROM boardgames 
   WHERE  '$pub'
   AND    boardgame_min_players <= '$min_players'
