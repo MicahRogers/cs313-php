@@ -38,10 +38,6 @@
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
   }
-print "$publisher ";
-print "$min_players ";
-print "$max_players ";
-print "$coop_or_comp ";
 
 $pub;
 $max;
@@ -80,10 +76,7 @@ else
 {
   $cc = "boardgame_coop_or_comp = boardgame_coop_or_comp";
 }
-print "<br>";
-print "publisher_id = '$publisher'";
-print "<br>";
-print $pub;
+
   $query = "SELECT * FROM boardgames 
   WHERE  publisher_id = '$publisher'
   AND    boardgame_min_players <= '$min_players'
