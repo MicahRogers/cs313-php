@@ -38,33 +38,10 @@
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
   }
-print "$publisher";
-print "$min_players";
-print "$max_players";
-print "$coop_or_comp";
-
-
-if ( $min_players == NULL)
-{print "null";
-}
-else
-{
-print "not null";
-}
-if ( $max_players == NULL)
-{print "null";
-}
-else
-{
-print "not null";
-}
-if ( $coop_or_comp == NULL)
-{print "null";
-}
-else
-{
-print "not null";
-}
+print "$publisher ";
+print "$min_players ";
+print "$max_players ";
+print "$coop_or_comp ";
 
   $query = "SELECT * FROM boardgames WHERE  publisher_id = '$publisher'";
 
