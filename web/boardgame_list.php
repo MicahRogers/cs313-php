@@ -60,7 +60,7 @@ else
 
 
   $query = "SELECT * FROM boardgames 
-  WHERE  publisher_id = '$publisher'
+  WHERE  '$pub'
   AND    boardgame_min_players <= '$min_players'
   AND    boardgame_max_players >= '$max_players'
   AND    boardgame_coop_or_comp = '$coop_or_comp'";
