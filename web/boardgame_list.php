@@ -86,7 +86,7 @@ print "<br>";
 print $query;
 foreach ($db->query($query) as $row)
   {
-   print "<p><b>Name: $row[1] " . "Min Players: $row[2]:" . "Max Players $row[3]</b> - " . "$row[4] " . " Publisher: $row[5]</p>\n\n";
+   print "<p>Name: $row[1] | " . "Min Players: $row[2] | " . "Max Players $row[3] | " . "$row[4] | " . " Publisher: $row[5]</p>\n\n";
   }
 
 ?>
