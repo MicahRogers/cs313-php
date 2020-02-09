@@ -43,10 +43,7 @@ print "$min_players";
 print "$max_players";
 print "$coop_or_comp";
 
-else
-{
-print "not null";
-}
+
 if ( $min_players == NULL)
 {print "null";
 }
