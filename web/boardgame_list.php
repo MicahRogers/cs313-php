@@ -38,10 +38,10 @@
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
   }
-print $publisher;
-print $min_players;
-print $max_players;
-print $coop_or_comp;
+print "$publisher";
+print "$min_players";
+print "$max_players";
+print "$coop_or_comp";
 
 else
 {
