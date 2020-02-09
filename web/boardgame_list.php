@@ -46,7 +46,7 @@ $cc;
 
 if ($publisher != null)
 {
-  $pub = "(SELECT publisher_name FROM publishers) = '$publisher'";
+  $pub = "(SELECT publisher_name FROM publishers WHERE publisher_id = '$publisher') = '$publisher'";
 }
 else
 {
