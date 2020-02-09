@@ -52,6 +52,10 @@ if ($publisher != null)
 {
   $pub = "publisher_id = '$publisher'";
 }
+else
+{
+  $pub = "publisher_id != NULL";
+}
 
 
 
