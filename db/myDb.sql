@@ -16,6 +16,7 @@ CREATE TABLE boardgames (
     publisher_id              int NOT NULL REFERENCES publishers(publisher_id)
 );
 
+INSERT INTO publishers VALUES (DEFAULT, 'other');
 INSERT INTO publishers VALUES (DEFAULT, 'Z-Man Games');
 INSERT INTO publishers VALUES (DEFAULT, 'Hasbro');
 INSERT INTO publishers VALUES (DEFAULT, 'Test Publisher');
