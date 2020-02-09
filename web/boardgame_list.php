@@ -46,7 +46,7 @@ $cc;
 
 if ($publisher != null)
 {
-  $pub = "(SELECT publisher_name FROM publishers WHERE publisher_id = '$publisher')";
+  $pub = "publisher_id = '$publisher'";
 }
 else
 {
@@ -89,7 +89,7 @@ print "<br>";
 print "<br>";
 foreach ($db->query($query) as $row)
   {
-   print "<p>Name: $row[1] | " . "Min Players: $row[2] | " . "Max Players $row[3] | " . "$row[4] | " . " Publisher: $row[5]</p>\n\n";
+   print "<p>Name: $row[1] | " . "Min Players: $row[2] | " . "Max Players $row[3] | " . "$row[4]</p>\n\n";
   }
 
 ?>
