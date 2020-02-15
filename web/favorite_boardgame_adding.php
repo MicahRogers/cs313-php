@@ -117,7 +117,7 @@ else
   $cc = "boardgame_coop_or_comp = boardgame_coop_or_comp";
 }
 
-  $query = "SELECT * FROM boardgames"
+  $query = "SELECT * FROM boardgames;"
 
 
     foreach ($db->query($query) as $row)
