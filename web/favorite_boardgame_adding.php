@@ -70,12 +70,8 @@
 		die();
 	}
 
-	//$query = 'INSERT INTO boardgames(boardgame_name, boardgame_min_players, boardgame_max_players,
-	//	  boardgame_coop_or_comp, publisher_id) VALUES(:name, :min, :max, :coop_or_comp, :publisher_id)';
-	//$statement = $db->prepare($query);
-
 	$query = 'INSERT INTO boardgames(boardgame_name, boardgame_min_players, boardgame_max_players,
-		  boardgame_coop_or_comp, publisher_id) VALUES('$name', $min_players, $max_players, $coop_or_comp, $publisher_id)';
+		  boardgame_coop_or_comp, publisher_id) VALUES(:name, :min, :max, :coop_or_comp, :publisher_id)';
 	$statement = $db->prepare($query);
 
 	// Now we bind the values to the placeholders. This does some nice things
