@@ -82,12 +82,6 @@ else
   AND    $min
   AND    $max
   AND    $cc";
-
-foreach ($db->query($query) as $row)
-  {
-   print "<p>Name: $row[1] | " . "Min Players: $row[2] | " . "Max Players $row[3] | " . "$row[4]</p>\n\n";
-  }
-
 ?>
  
 <!DOCTYPE html>
@@ -98,6 +92,15 @@ foreach ($db->query($query) as $row)
 <title>Boardgames</title>
 </head>
 <body>
+  <a href="favorite_boardgame_search">Search</a>
+  <?php
+    foreach ($db->query($query) as $row)
+    {
+      print "<p>Name: $row[1] | " . "Min Players: $row[2] | " . "Max Players $row[3] | " . "$row[4]</p>\n\n";
+    }
+  ?>
+
+
 
 </body>
 
