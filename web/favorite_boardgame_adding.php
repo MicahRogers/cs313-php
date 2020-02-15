@@ -83,6 +83,6 @@
         $statement->bindValue(':content', $publisher_id);
 
 	$statement->execute();
-}
+
 
 ?>
