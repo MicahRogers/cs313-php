@@ -83,24 +83,6 @@
         $statement->bindValue(':content', $publisher_id);
 
 	$statement->execute();
-
-	// get the new id
-	//$scriptureId = $db->lastInsertId("scripture_id_seq");
-
-	// Now go through each topic id in the list from the user's checkboxes
-	//foreach ($topicIds as $topicId)
-//	{
-//		echo "ScriptureId: $scriptureId, topicId: $topicId";
-
-//		// Again, first prepare the statement
-//		$statement = $db->prepare('INSERT INTO scripture_topic(scriptureId, topicId) VALUES(:scriptureId, :topicId)');
-//
-//		// Then, bind the values
-//		$statement->bindValue(':scriptureId', $scriptureId);
-//		$statement->bindValue(':topicId', $topicId);
-
-//		$statement->execute();
-//	}
-
+}
 
 ?>
