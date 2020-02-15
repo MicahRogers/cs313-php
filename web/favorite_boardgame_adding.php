@@ -35,6 +35,8 @@
 		if (!isset($dbUrl) || empty($dbUrl)) {
 			echo "empty";
 		}
+else
+{ echo "not empty";}
 
 		// Get the various parts of the DB Connection from the URL
 		$dbopts = parse_url($dbUrl);
