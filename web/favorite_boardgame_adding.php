@@ -1,6 +1,33 @@
 
 
 <?php
+  session_start();
+
+  $dbUrl = getenv('DATABASE_URL');
+
+  if (empty($dbUrl)) {
+   // example localhost configuration URL with postgres username and a database called cs313db
+   $dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
+  }
+  
+  $dbopts = parse_url($dbUrl);
+  
+  $dbHost = $dbopts["host"];
+  $dbPort = $dbopts["port"];
+  $dbUser = $dbopts["user"];
+  $dbPassword = $dbopts["pass"];
+  $dbName = ltrim($dbopts["path"],'/');
+  
+  //print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
+  
+  try {
+   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+  }
+  catch (PDOException $ex) {
+   print "<p>error: $ex->getMessage() </p>\n\n";
+   die();
+  }
+
   $name;
   $name = $_POST["name"];
 
@@ -26,39 +53,7 @@
  echo "coop or comp=$coop_or_comp\n";
 
 //require("dbConnect.php");
-	$db = NULL;
 
-	try {
-		// default Heroku Postgres configuration URL
-		$dbUrl = getenv('DATABASE_URL');
-
-		if (!isset($dbUrl) || empty($dbUrl)) {
-			echo "empty";
-		}
-else
-{ echo "not empty";}
-
-		// Get the various parts of the DB Connection from the URL
-		$dbopts = parse_url($dbUrl);
-
-		$dbHost = $dbopts["host"];
-		$dbPort = $dbopts["port"];
-		$dbUser = $dbopts["user"];
-		$dbPassword = $dbopts["pass"];
-		$dbName = ltrim($dbopts["path"],'/');
-
-		// Create the PDO connection
-		$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-		// this line makes PDO give us an exception when there are problems, and can be very helpful in debugging!
-		$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-	}
-	catch (PDOException $ex) {
-		// If this were in production, you would not want to echo
-		// the details of the exception.
-		echo "Error connecting to DB. Details: $ex";
-		die();
-	}
 
 	$query = 'INSERT INTO boardgames(boardgame_name, boardgame_min_players, boardgame_max_players,
 		  boardgame_coop_or_comp, publisher_id) VALUES(:name, :min, :max, :coop_or_comp, :publisher_id)';
@@ -73,7 +68,28 @@ else
         $statement->bindValue(':publisher_id', $publisher_id );
 
 	$statement->execute();
-?>
 
 
+
+  $query = "SELECT * FROM boardgames 
+  WHERE  $pub
+  AND    $min
+  AND    $max
+  AND    $cc";
+
+ ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="homepage.css">
+<title>adding</title>
+</head>
+<body>
+  <a href="favorite_boardgame_search.php">Search</a>
+  <?php
+    foreach ($db->query($query) as $row)
+    {
+      print "<p>Name: $row[1] | " . "Min Players: $row[2] | " . "Max Players $row[3] | " . "$row[4]</p>\n\n";
+    }
 ?>
