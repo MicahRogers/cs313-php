@@ -41,10 +41,9 @@
 <body>
 <form action="favorite_boardgame_adding.php" method="POST">
 Name
-<input type="text" name="name"><br>
+<input type="text" name="name" required><br>
 Publisher
-<select name="publisher">
-  <option value=>All</option>
+<select name="publisher" required>
   <option value=1>Z-Man Games</option>
   <option value=2>Hasbro</option>
   <option value=3>Test Publisher</option>
@@ -52,8 +51,7 @@ Publisher
 </select>
 <br>
 Minimum Players
-<select name="min_players">
-  <option value=>Any</option>
+<select name="min_players" required>
   <option value=1>1</option>
   <option value=2>2</option>
   <option value=3>3</option>
@@ -65,8 +63,7 @@ Minimum Players
 </select>
 <br>
 Maximum Players
-<select name="max_players">
-  <option value=>Any</option>
+<select name="max_players" required>
   <option value=2>2</option>
   <option value=3>3</option>
   <option value=4>4</option>  
@@ -85,8 +82,7 @@ Maximum Players
 </select>
 <br>
 Cooperative or Competitive
-<select name="coop_or_comp">
-  <option value=>Either</option>
+<select name="coop_or_comp" required>
   <option value=Cooperative>Cooperative</option>
   <option value=Competitive>Competitive</option>
 </select>
