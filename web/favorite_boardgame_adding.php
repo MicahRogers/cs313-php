@@ -76,11 +76,11 @@
 
 	// Now we bind the values to the placeholders. This does some nice things
 	// including sanitizing the input with regard to sql commands.
-//	$statement->bindValue(':book', $name);
-//	$statement->bindValue(':chapter', $min_players );
-//	$statement->bindValue(':verse', $max_players );
-//	$statement->bindValue(':content', $coop_or_comp );
-  //      $statement->bindValue(':content', $publisher_id );
+	$statement->bindValue(':book', 'cool');
+	$statement->bindValue(':chapter', 2 );
+	$statement->bindValue(':verse', 8 );
+	$statement->bindValue(':content', 'Cooperative' );
+        $statement->bindValue(':content', 3 );
 
 	$statement->execute();
 
