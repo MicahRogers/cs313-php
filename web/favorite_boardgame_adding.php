@@ -71,11 +71,7 @@
 
 
 
-  $query = "SELECT * FROM boardgames 
-  WHERE  $pub
-  AND    $min
-  AND    $max
-  AND    $cc";
+  $query = "SELECT * FROM boardgames";
 
  ?>
 <!DOCTYPE html>
@@ -86,7 +82,7 @@
 <title>adding</title>
 </head>
 <body>
-  <a href="favorite_boardgame_search.php">Search</a>
+  <a href="favorite_boardgame_add.php">add</a>
   <?php
     foreach ($db->query($query) as $row)
     {
