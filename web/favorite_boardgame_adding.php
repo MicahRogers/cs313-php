@@ -56,7 +56,7 @@
 
 
 	$query = 'INSERT INTO boardgames(boardgame_name, boardgame_min_players, boardgame_max_players,
-		  boardgame_coop_or_comp, publisher_id) VALUES(:name, :min, :max, :coop_or_comp, :publisher_id)';
+		  boardgame_coop_or_comp, publisher_id) VALUES(:name, :min, :max, :coop_or_comp, :publisher)';
 	$statement = $db->prepare($query);
 
 	// Now we bind the values to the placeholders. This does some nice things
@@ -65,7 +65,7 @@
 	$statement->bindValue(':min', $min_players );
 	$statement->bindValue(':max', $max_players );
 	$statement->bindValue(':coop_or_comp', $coop_or_comp );
-        $statement->bindValue(':publisher_id', $publisher_id );
+        $statement->bindValue(':publisher', $publisher );
 
 	$statement->execute();
 
