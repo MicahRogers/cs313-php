@@ -61,7 +61,7 @@
 
 	// Now we bind the values to the placeholders. This does some nice things
 	// including sanitizing the input with regard to sql commands.
-	$statement->bindValue(':name', $name );
+	$statement->bindValue(':name', strtolower($name) );
 	$statement->bindValue(':min', $min_players );
 	$statement->bindValue(':max', $max_players );
 	$statement->bindValue(':coop_or_comp', $coop_or_comp );
