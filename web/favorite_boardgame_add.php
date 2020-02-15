@@ -1,18 +1,5 @@
 <?php
   session_start();
-  
-  $publisher;
-  $publisher = $_POST["publisher"];
-
-  $min_players;
-  $min_players = $_POST["min_players"];
-
-  $max_players;
-  $max_players = $_POST["max_players"];
- 
-  $coop_or_comp;
-  $coop_or_comp = $_POST["coop_or_comp"];
-
 
   $dbUrl = getenv('DATABASE_URL');
 
@@ -38,51 +25,8 @@
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
   }
-
-$pub;
-$max;
-$min;
-$cc;
-
-if ($publisher != null)
-{
-  $pub = "publisher_id = '$publisher'";
-}
-else
-{
-  $pub = "publisher_id = publisher_id";
-}
-if ($min_players != null)
-{
-  $min = "boardgame_min_players <= '$min_players'";
-}
-else
-{
-  $min = "boardgame_min_players = boardgame_min_players";
-}
-if ($max_players != null)
-{
-  $max = "boardgame_max_players >= '$max_players'";
-}
-else
-{
-  $max = "boardgame_max_players = boardgame_max_players";
-}
-if ($coop_or_comp != null)
-{
-  $cc = "boardgame_coop_or_comp = '$coop_or_comp'";
-}
-else
-{
-  $cc = "boardgame_coop_or_comp = boardgame_coop_or_comp";
-}
-
-  $query = "SELECT * FROM boardgames 
-  WHERE  $pub
-  AND    $min
-  AND    $max
-  AND    $cc";
 ?>
+
  
 <!DOCTYPE html>
 <html>
@@ -91,17 +35,64 @@ else
 <link rel="stylesheet" type="text/css" href="homepage.css">
 <title>Boardgames</title>
 </head>
+<header>
+  <h1>Search for Boardgames</h1>
+</header>
 <body>
-  <a href="favorite_boardgame_search.php">Search</a>
-  <?php
-    foreach ($db->query($query) as $row)
-    {
-      print "<p>Name: $row[1] | " . "Min Players: $row[2] | " . "Max Players $row[3] | " . "$row[4]</p>\n\n";
-    }
-  ?>
-
-
-
+<form action="favorite_boardgame_adding.php" method="POST">
+Name
+<input type="text" name="name"><br>
+Publisher
+<select name="publisher">
+  <option value=>All</option>
+  <option value=1>Z-Man Games</option>
+  <option value=2>Hasbro</option>
+  <option value=3>Test Publisher</option>
+  <option value=4>Other</option>
+</select>
+<br>
+Minimum Players
+<select name="min_players">
+  <option value=>Any</option>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>  
+  <option value=5>5</option>
+  <option value=6>6</option>
+  <option value=7>7</option>
+  <option value=8>8</option>
+</select>
+<br>
+Maximum Players
+<select name="max_players">
+  <option value=>Any</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>  
+  <option value=5>5</option>
+  <option value=6>6</option>
+  <option value=7>7</option>
+  <option value=8>8</option>
+  <option value=9>9</option>
+  <option value=10>10</option>
+  <option value=11>11</option>
+  <option value=12>12</option>
+  <option value=13>13</option>
+  <option value=14>14</option>
+  <option value=15>15</option>
+  <option value=16>16</option>
+</select>
+<br>
+Cooperative or Competitive
+<select name="coop_or_comp">
+  <option value=>Either</option>
+  <option value=Cooperative>Cooperative</option>
+  <option value=Competitive>Competitive</option>
+</select>
+<br>
+<input type="submit" name= "submit" value="Submit">
+</form>
 </body>
 
 </html>
