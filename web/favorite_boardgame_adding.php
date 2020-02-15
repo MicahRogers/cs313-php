@@ -74,7 +74,15 @@
 		  boardgame_coop_or_comp, publisher_id) VALUES(:name, :min, :max, :coop_or_comp, :publisher_id)';
 	$statement = $db->prepare($query);
 
+	// Now we bind the values to the placeholders. This does some nice things
+	// including sanitizing the input with regard to sql commands.
+	$statement->bindValue(':book', $name);
+	$statement->bindValue(':chapter', $min_players);
+	$statement->bindValue(':verse', $max_players);
+	$statement->bindValue(':content', $coop_or_comp);
+        $statement->bindValue(':content', $publisher_id);
 
+	$statement->execute();
 
 	// get the new id
 	//$scriptureId = $db->lastInsertId("scripture_id_seq");
