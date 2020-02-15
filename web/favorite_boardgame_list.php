@@ -92,7 +92,7 @@ else
 <title>Boardgames</title>
 </head>
 <body>
-  <a href="favorite_boardgame_search">Search</a>
+  <a href="favorite_boardgame_search.php">Search</a>
   <?php
     foreach ($db->query($query) as $row)
     {
