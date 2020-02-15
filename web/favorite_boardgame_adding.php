@@ -84,5 +84,45 @@
 
 	$statement->execute();
 
+if ($publisher != null)
+{
+  $pub = "publisher_id = '$publisher'";
+}
+else
+{
+  $pub = "publisher_id = publisher_id";
+}
+if ($min_players != null)
+{
+  $min = "boardgame_min_players <= '$min_players'";
+}
+else
+{
+  $min = "boardgame_min_players = boardgame_min_players";
+}
+if ($max_players != null)
+{
+  $max = "boardgame_max_players >= '$max_players'";
+}
+else
+{
+  $max = "boardgame_max_players = boardgame_max_players";
+}
+if ($coop_or_comp != null)
+{
+  $cc = "boardgame_coop_or_comp = '$coop_or_comp'";
+}
+else
+{
+  $cc = "boardgame_coop_or_comp = boardgame_coop_or_comp";
+}
+
+  $query = "SELECT * FROM boardgames 
+  WHERE  $pub
+  AND    $min
+  AND    $max
+  AND    $cc";
+?>
+
 
 ?>
