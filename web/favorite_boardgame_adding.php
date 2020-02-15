@@ -117,11 +117,8 @@ else
   $cc = "boardgame_coop_or_comp = boardgame_coop_or_comp";
 }
 
-  $query = "SELECT * FROM boardgames 
-  WHERE  $pub
-  AND    $min
-  AND    $max
-  AND    $cc";
+  $query = "SELECT * FROM boardgames"
+
 
     foreach ($db->query($query) as $row)
     {
