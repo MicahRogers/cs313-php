@@ -36,10 +36,11 @@
 <title>Boardgames</title>
 </head>
 <header>
+  <a href="favorite_boardgame_add.php">Add</a><br>
   <h1>Search for Boardgames</h1>
 </header>
 <body>
-  <a href="favorite_boardgame_add.php">Add</a>
+
 <form action="favorite_boardgame_list.php" method="POST">
 Publisher
 <select name="publisher">

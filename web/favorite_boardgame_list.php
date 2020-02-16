@@ -91,6 +91,10 @@ else
 <link rel="stylesheet" type="text/css" href="homepage.css">
 <title>Boardgames</title>
 </head>
+<header>
+  <a href="favorite_boardgame_search.php">Search</a> | <a href="favorite_boardgame_add.php">Add<a/><br>
+  <h1>Boardgames List</h1>
+</header>
 <body>
   <a href="favorite_boardgame_search.php">Search</a>
   <?php
