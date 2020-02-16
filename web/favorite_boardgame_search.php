@@ -37,7 +37,7 @@
 </head>
 <header>
   <a href="favorite_boardgame_add.php">Add</a><br>
-  <h1>Search for Boardgames</h1>
+  <h1>Search Boardgames</h1>
 </header>
 <body>
 

@@ -96,7 +96,6 @@ else
   <h1>Boardgames List</h1>
 </header>
 <body>
-  <a href="favorite_boardgame_search.php">Search</a>
   <?php
     foreach ($db->query($query) as $row)
     {
