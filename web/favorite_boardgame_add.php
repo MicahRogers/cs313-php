@@ -88,7 +88,7 @@ Cooperative or Competitive
   <option value=Competitive>Competitive</option>
 </select>
 <br>
-<input type="submit" name= "submit" value="Submit">
+<input type="submit" name= "Add" value="Submit">
 </form>
 </body>
 
