@@ -22,9 +22,9 @@ INSERT INTO publishers VALUES (DEFAULT, 'Test Publisher');
 
 INSERT INTO publishers VALUES (DEFAULT, 'other');
 
-INSERT INTO boardgames VALUES (DEFAULT, 'Monopoly', 2, 8, 'Competitive', (SELECT publisher_id FROM publishers WHERE publisher_name = 'Hasbro'));
-INSERT INTO boardgames VALUES (DEFAULT, 'Test Game', 4, 12, 'Competitive', (SELECT publisher_id FROM publishers WHERE publisher_name = 'Test Publisher'));
-INSERT INTO boardgames VALUES (DEFAULT, 'Pandemic', 1, 4, 'Cooperative', (SELECT publisher_id FROM publishers WHERE publisher_name = 'Z-Man Games'));
+INSERT INTO boardgames VALUES (DEFAULT, 'monopoly', 2, 8, 'Competitive', (SELECT publisher_id FROM publishers WHERE publisher_name = 'Hasbro'));
+INSERT INTO boardgames VALUES (DEFAULT, 'test game', 4, 12, 'Competitive', (SELECT publisher_id FROM publishers WHERE publisher_name = 'Test Publisher'));
+INSERT INTO boardgames VALUES (DEFAULT, 'pandemic', 1, 4, 'Cooperative', (SELECT publisher_id FROM publishers WHERE publisher_name = 'Z-Man Games'));
 
 SELECT 
 boardgame_name,

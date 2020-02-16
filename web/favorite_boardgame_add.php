@@ -36,9 +36,10 @@
 <title>Boardgames</title>
 </head>
 <header>
-  <h1>Search for Boardgames</h1>
+  <h1>Add Boardgames</h1>
 </header>
 <body>
+<a href="favorite_boardgame_search.php">Search</a>
 <form action="favorite_boardgame_adding.php" method="POST">
 Name
 <input type="text" name="name" required><br>
