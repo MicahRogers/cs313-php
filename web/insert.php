@@ -36,15 +36,15 @@
   $password = $_POST['password'];
 }
 
-$password = password_hash($password, PASSWORD_DEFAULT);
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-	$query = 'INSERT INTO users() VALUES(user_name, user_password) VALUES (:username, :password)';
+	$query = 'INSERT INTO users(user_name, user_password) VALUES (:username, :password)';
 	$statement = $db->prepare($query);
 
 	// Now we bind the values to the placeholders. This does some nice things
 	// including sanitizing the input with regard to sql commands.
 	$statement->bindValue(':username', $username );
-	$statement->bindValue(':password', $password );
+	$statement->bindValue(':password', $hashedPassword );
 
 	$statement->execute();
 
