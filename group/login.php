@@ -48,11 +48,6 @@ $password = password_hash($password, PASSWORD_DEFAULT);
 
 	$statement->execute();
 
-
-$newURL = 'welcome.php';
-header('Location: ' . $newURL);
-die();
-
 ?>
 
  
@@ -72,7 +67,7 @@ die();
 
 <input name="username" type="text"><br>
 <input name="password" type="password"><br>
-<button type='submit'>Signin
+<button type='submit'>Sign in
 </form>
 
 </body>

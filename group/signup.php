@@ -1,53 +1,44 @@
 <?php
-  session_start();
-
-  $dbUrl = getenv('DATABASE_URL');
-
-  if (empty($dbUrl)) {
-   // example localhost configuration URL with postgres username and a database called cs313db
-   $dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
-  }
-  
-  $dbopts = parse_url($dbUrl);
-  
-  $dbHost = $dbopts["host"];
-  $dbPort = $dbopts["port"];
-  $dbUser = $dbopts["user"];
-  $dbPassword = $dbopts["pass"];
-  $dbName = ltrim($dbopts["path"],'/');
-  
-  //print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
-  
-  try {
-   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-  }
-  catch (PDOException $ex) {
-   print "<p>error: $ex->getMessage() </p>\n\n";
-   die();
-  }
-
+/**********************************************************
+* File: singup.php
+* Author: Br. Burton
+* 
+* Description: Allows a user to enter a new username
+*   and password to add to the DB.
+*
+* It posts to a file called "createAccount.php"
+*   which does the actual creation.
+*
+***********************************************************/
 ?>
 
- 
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="homepage.css">
-
+	<title>Sign Up</title>
 </head>
-<header>
 
-</header>
 <body>
+<div>
 
-<form method="POST">
+<h1>Sign up for new account</h1>
 
-<input name="username" type="text"><br>
-<input name="password" type="password">
-<button type='submit'>
+<form id="mainForm" action="createAccount.php" method="POST">
+
+	<input type="text" id="txtUser" name="txtUser" placeholder="Username">
+	<label for="txtUser">Username</label>
+	<br /><br />
+
+	<input type="password" id="txtPassword" name="txtPassword" placeholder="Password"></input>
+	<label for="txtPassword">Password</label>
+	<br /><br />
+
+	<input type="submit" value="Create Account" />
+
 </form>
 
-</body>
 
+</div>
+
+</body>
 </html>
