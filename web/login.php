@@ -80,12 +80,12 @@ if (isset($_POST['username']) && isset($_POST['password']))
 </header>
 <body>
 <?php
-if (!$goodLogin)
+if ($badLogin)
 {
 	echo "Incorrect username or password!<br /><br />\n";
 }
 ?>
-<form method="POST">
+<form action="login.php" method="POST">
 
 <input name="username" type="text"><br>
 <input name="password" type="password"><br>
