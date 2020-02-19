@@ -49,7 +49,7 @@ $password = password_hash($password, PASSWORD_DEFAULT);
 	$statement->execute();
 
 
-$newURL = 'signin.php';
+$newURL = 'login.php';
 header('Location: ' . $newURL);
 die();
 
