@@ -26,9 +26,9 @@
    die();
   }
 
-$newURL = 'login.php';
-header('Location: ' . $newURL);
-die();
+//$newURL = 'login.php';
+//header('Location: ' . $newURL);
+//die();
 ?>
 
  
