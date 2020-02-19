@@ -26,9 +26,9 @@
    die();
   }
 
-//$newURL = 'login.php';
-//header('Location: ' . $newURL);
-//die();
+$newURL = 'login.php';
+header('Location: ' . $newURL);
+die();
 ?>
 
  
@@ -44,7 +44,7 @@
 </header>
 <body>
 
-<form method="POST">
+<form action='login.php' method="POST">
 
 <input name="username" type="text"><br>
 <input name="password" type="password">
