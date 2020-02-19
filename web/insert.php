@@ -1,3 +1,4 @@
+<?php
 // get the data from the POST
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -34,3 +35,4 @@ die(); // we always include a die after redirects. In this case, there would be 
        // harm if the user got the rest of the page, because there is nothing else
        // but in general, there could be things after here that we don't want them
        // to see.
+?>
