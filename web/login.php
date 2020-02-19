@@ -50,11 +50,18 @@
   {
     $row = $statement->fetch();
     $hashedPasswordFromDB = $row['user_password'];
+    
     // password was correct, put the user on the session, and redirect to home
+    if (password_verify($password, $hashedPasswordFromDB))
+    {
     $_SESSION['username'] = $username;
     header("Location: welcome.php");
     die(); // we always include a die after redirects.
   }
+    else
+      {$goodLogin = false }
+  else
+    {$goodLogin = false }
 
 ?>
 
@@ -70,7 +77,12 @@
 
 </header>
 <body>
-
+<?php
+if (!$goodLogin)
+{
+	echo "Incorrect username or password!<br /><br />\n";
+}
+?>
 <form method="POST">
 
 <input name="username" type="text"><br>
