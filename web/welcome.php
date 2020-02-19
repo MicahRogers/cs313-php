@@ -65,6 +65,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
 		$badLogin = true;
 	}
 }
+
+echo "hello";
 ?>
 
  
@@ -79,18 +81,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
 
 </header>
 <body>
-<?php
-if (!$goodLogin)
-{
-	echo "Incorrect username or password!<br /><br />\n";
-}
-?>
-<form method="POST">
+ 
 
-<input name="username" type="text"><br>
-<input name="password" type="password"><br>
-<button type='submit'>Sign in
-</form>
 
 </body>
 
