@@ -26,9 +26,9 @@
    die();
   }
 
-$newURL = 'login.php';
-header('Location: ' . $newURL);
-die();
+//$newURL = 'login.php';
+//header('Location: ' . $newURL);
+//die();
 ?>
 
  
@@ -47,8 +47,8 @@ die();
 <form method="POST">
 
 <input name="username" type="text"><br>
-<input name="password" type="password">
-<button type='submit'>
+<input name="password" type="password"><br>
+<button type='submit'> create account
 </form>
 
 </body>
