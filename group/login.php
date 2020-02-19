@@ -53,12 +53,6 @@ $newURL = 'welcome.php';
 header('Location: ' . $newURL);
 die();
 
-CREATE TABLE users (
-    user_id              SERIAL NOT NULL PRIMARY KEY,
-    user_name            varchar(40) UNIQUE NOT NULL,
-    user_password        varchar(40) NOT NULL
-);
-
 ?>
 
  

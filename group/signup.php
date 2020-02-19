@@ -44,7 +44,7 @@
 </header>
 <body>
 
-<form action='login.php' method="POST">
+<form method="POST">
 
 <input name="username" type="text"><br>
 <input name="password" type="password">
