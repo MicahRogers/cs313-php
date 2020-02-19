@@ -1,6 +1,8 @@
 <?php
   session_start();
 
+  $goodLogin = true;
+
   $dbUrl = getenv('DATABASE_URL');
 
   if (empty($dbUrl)) {
@@ -36,23 +38,23 @@
   $password = $_POST['password'];
 }
 
-$password = password_hash($password, PASSWORD_DEFAULT);
 
-	$query = 'INSERT INTO users() VALUES(user_name, user_password) VALUES (:username, :password)';
+	$query = 'SELECT user_password FROM user WHERE user_username=:username';
+
 	$statement = $db->prepare($query);
+	$statement->bindValue(':username', $username);
 
-	// Now we bind the values to the placeholders. This does some nice things
-	// including sanitizing the input with regard to sql commands.
-	$statement->bindValue(':username', $username );
-	$statement->bindValue(':password', $password );
+	$result = $statement->execute();
 
-	$statement->execute();
-
-
-$newURL = 'welcome.php';
-header('Location: ' . $newURL);
-die();
-
+  if ($result)
+  {
+    $row = $statement->fetch();
+    $hashedPasswordFromDB = $row['user_password'];
+    // password was correct, put the user on the session, and redirect to home
+    $_SESSION['username'] = $username;
+    header("Location: welcome.php");
+    die(); // we always include a die after redirects.
+  }
 
 ?>
 
