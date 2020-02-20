@@ -27,7 +27,7 @@
   }
 
 
-echo "hello";
+echo "hello " . $_SESSION['username'];
 ?>
 
  
