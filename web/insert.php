@@ -46,12 +46,13 @@ $username = htmlspecialchars($username);
 // Get the hashed password.
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-$query = 'INSERT INTO users(user_name, user_password) VALUES(:username, :password)';
+$query = 'INSERT INTO users(user_id, user_name, user_password) VALUES(DEFAULT, :username, :password)';
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $hashedPassword);
 
 $statement->execute();
+
 
 
 // finally, redirect them to the sign in page

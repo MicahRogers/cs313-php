@@ -46,9 +46,6 @@
 // For debugging purposes, you might include some echo statements like this
 // and then not automatically redirect until you have everything working.
 
-//require("dbConnect.php");
-
-
 	$query = 'INSERT INTO boardgames(boardgame_name, boardgame_min_players, boardgame_max_players,
 		  boardgame_coop_or_comp, publisher_id) VALUES(:name, :min, :max, :coop_or_comp, :publisher)';
 	$statement = $db->prepare($query);
