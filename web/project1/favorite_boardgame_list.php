@@ -96,13 +96,14 @@ else
   <h1>Boardgames List</h1>
 </header>
 <body>
+<p>
   <?php
     foreach ($db->query($query) as $row)
     {
       print "<p>Name: $row[1] | " . "Min Players: $row[2] | " . "Max Players $row[3] | " . "$row[4]</p>\n\n";
     }
   ?>
-
+</p>
 
 
 </body>
