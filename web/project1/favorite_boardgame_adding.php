@@ -60,23 +60,6 @@
 
 	$statement->execute();
 
-
-
-  $query = "SELECT * FROM boardgames";
-
+	header("Location: boardgame_list.php");
+	die(); // we always include a die after redirects.
  ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="boardgame.css">
-<title>adding</title>
-</head>
-<body>
-  <a href="favorite_boardgame_add.php">Add</a> | <a href="favorite_boardgame_search.php">Search</a><br>
-  <?php
-    foreach ($db->query($query) as $row)
-    {
-      print "<p>Name: $row[1] | " . "Min Players: $row[2] | " . "Max Players $row[3] | " . "$row[4]</p>\n\n";
-    }
-?>
