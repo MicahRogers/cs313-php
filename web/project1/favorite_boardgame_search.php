@@ -41,7 +41,7 @@
 </header>
 <body>
 
-<form action="favorite_boardgame_list.php" method="POST" class="col-4 col-s-12">
+<form action="favorite_boardgame_list.php" method="POST" class="col-9 col-s-12">
 Publisher
 <select name="publisher">
   <option value=>All</option>
