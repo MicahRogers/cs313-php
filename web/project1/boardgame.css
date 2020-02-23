@@ -6,7 +6,7 @@ header {
 }
 
 h1 {
-  font-size: 200%;
+  font-size: 300%;
 }
 
 footer {
@@ -20,10 +20,10 @@ body {
 
 form {
   text-align:center;
-  font-size: 200%;
+  font-size: 150%;
 }
 
 p {
   text-align:center;
-  font-size: 200%;
+  font-size: 150%;
 }
