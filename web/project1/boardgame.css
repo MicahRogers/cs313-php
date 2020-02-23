@@ -4,6 +4,11 @@ header {
   background-color:orange;
   text-align:center;
 }
+
+h1 {
+font size="6";
+}
+
 footer {
   background-color:blue;
   text-align:center;
@@ -15,8 +20,10 @@ body {
 
 form {
   text-align:center;
+  font size="5";
 }
 
 p {
   text-align:center;
+  font size="5";
 }
