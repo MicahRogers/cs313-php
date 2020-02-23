@@ -60,6 +60,6 @@
 
 	$statement->execute();
 
-	header("Location: boardgame_list.php");
+	header("Location: favorite_boardgame_list.php");
 	die(); // we always include a die after redirects.
  ?>
