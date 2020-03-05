@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 
 // tell it to use the public directory as one where static files live
 app.use(express.static(__dirname));
