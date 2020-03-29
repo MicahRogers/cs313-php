@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Form</title>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<script src="form.js"></script>
+</head>
+<body>
+<div>
+Boardgame Name
+<input type="text" id="boardgame_name" placeholder="monopoly"><br>
+ID
+<input type="text" id="boardgame_id" placeholder="1"><br>
+Minimum Players
+<select id="boardgame_min_players" required>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>  
+  <option value=5>5</option>
+  <option value=6>6</option>
+  <option value=7>7</option>
+  <option value=8>8</option>
+</select>
+<br>
+Maximum Players
+<select id="boardgame_max_players" required>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>  
+  <option value=5>5</option>
+  <option value=6>6</option>
+  <option value=7>7</option>
+  <option value=8>8</option>
+  <option value=9>9</option>
+  <option value=10>10</option>
+  <option value=11>11</option>
+  <option value=12>12</option>
+  <option value=13>13</option>
+  <option value=14>14</option>
+  <option value=15>15</option>
+  <option value=16>16</option>
+</select>
+<br>
+Cooperative or Competitive
+<select id="boardgame_coop_or_comp" required>
+  <option value=Cooperative>Cooperative</option>
+  <option value=Competitive>Competitive</option>
+</select> <br>
+	<button onclick="getGame();">Get Game</button>
+	<div id="game_list"></div>
+</div>
+
+</body>
+</html>
