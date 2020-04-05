@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="form.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#form_area").html("<div id='search_form'>Publisher<select id='publisher_id'><option value=0>All</option><option value=1>Z-Man Games</option><option value=2>Hasbro</option><option value=3>Test Publisher</option><option value=4>Other</option></select><br>Minimum Players<select id='boardgame_min_players'required><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=6>6</option><option value=7>7</option><option value=8>8</option></select><br>Maximum Players<select id='boardgame_max_players' required><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=6>6</option><option value=7>7</option><option value=8>8</option><option value=9>9</option><option value=10>10</option><option value=11>11</option><option value=12>12</option><option value=13>13</option><option value=14>14</option><option value=15>15</option><option value=16>16</option></select><br>Cooperative or Competitive<select id='boardgame_coop_or_comp' required><option value=Either>Either<option value=Cooperative>Cooperative</option><option value=Competitive>Competitive</option></select> <br><button onclick='getGames();'>Search Games</button></div>")
+  });
+  $("#btn2").click(function(){
+    $("#form_area").html("<div id='search_form'>Boardgame Name<input type='text' id='boardgame_name' placeholder='monopoly'><br>Publisher<select id='publisher_id' required><option value=1>Z-Man Games</option><option value=2>Hasbro</option><option value=3>Test Publisher</option><option value=4>Other</option></select><br>Minimum Players<select id='boardgame_min_players'required><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option>  <option value=5>5</option><option value=6>6</option><option value=7>7</option><option value=8>8</option></select> <br>Maximum Players<select id='boardgame_max_players' required><option value=2>2</option><option value=3>3</option><option value=4>4</option>  <option value=5>5</option><option value=6>6</option><option value=7>7</option><option value=8>8</option><option value=9>9</option><option value=10>10</option><option value=11>11</option><option value=12>12</option><option value=13>13</option><option value=14>14</option><option value=15>15</option><option value=16>16</option></select><br>Cooperative or Competitive<select id='boardgame_coop_or_comp' required><option value=Cooperative>Cooperative</option><option value=Competitive>Competitive</option></select> <br><button onclick='addGame();'>Add Game</button></div>")
+  });
+});
+</script>
+</head>
+<body>
+
+<button id="btn1">Search for Board game</button>
+<button id="btn2">Add Board game</button>
+<br><br>
+<div id="form_area"></div>
+<div id="game_list"></div>
+
+</body>
+</html>
